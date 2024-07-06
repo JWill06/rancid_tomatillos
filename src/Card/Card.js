@@ -9,7 +9,7 @@ const Card = ({video}) => {
                 <img alt='movie poster'src={video.poster_path}/>
             <div className='posterContainer'>
                 <h1 className='title'>{video.title}</h1>
-                <p className='rating'> {updatedRating}/10</p>
+                <p className='rating'> {updatedRating}/10 ★'s</p>
                 <p className='releaseDate'>{monthAndYear}</p>
             </div>
         </div>
