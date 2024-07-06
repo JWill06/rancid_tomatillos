@@ -1,0 +1,8 @@
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
+    padding: .5%;
+    margin: .9%;
+    font-family: 'Times New Roman', Times, serif;
+}
