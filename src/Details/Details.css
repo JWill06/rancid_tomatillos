@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    background: #4AC29A;  
+    background: -webkit-linear-gradient(to right, #BDFFF3, #4AC29A);  
+    background: linear-gradient(to top, #BDFFF3, #4AC29A); 
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.backdrop-image {
+    position: relative;
+    height: 100%;
+    max-width: 75%;
+}
+
+.backgroundContainer {
+    display: flex;
+    height: 60%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px;
+    img {
+        width: 25%;
+        border-radius: 5rem;
+    }
+}
+
+/* .posterContainer {
+    display: flex;
+    height: 10%;
+    align-items: ;
+    justify-content: space-around;
+    margin: 15px;
+} */

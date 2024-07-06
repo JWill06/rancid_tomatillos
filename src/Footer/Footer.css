@@ -1,0 +1,14 @@
+.footerContainer {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 10em; 
+    background: #4AC29A;  
+    background: -webkit-linear-gradient(to right, #BDFFF3, #4AC29A);  
+    background: linear-gradient(to bottom, #BDFFF3, #4AC29A); 
+}
+
+.tomatillo {
+    width: 5%;
+    height: auto;
+}

@@ -2,22 +2,22 @@
     display: flex;
     height: 7em;
     justify-content: space-between;
-    font-size: 30px;
+    font-size: 35px;
     font-family: cursive;
-    background: #4AC29A;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #BDFFF3, #4AC29A);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #BDFFF3, #4AC29A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #4AC29A;  
+    background: -webkit-linear-gradient(to right, #BDFFF3, #4AC29A);  
+    background: linear-gradient(to bottom, #BDFFF3, #4AC29A); 
     align-items: center;
 }
 .headerContent {
-    display: flex;
-    align-items: center;
-    gap: 25px; 
-}
-
-.tomatillo {
-   width: 7%;
+    display: inline-flex;
+    .tomatillo {
+        width: 5%;
+        padding: 55px;
+    }
+    h2 {
+        margin: 60px 0 0 35px;
+    }
 }
 
 .home,
@@ -26,4 +26,8 @@ background: linear-gradient(to top, #BDFFF3, #4AC29A); /* W3C, IE 10+/ Edge, Fir
     height: 4em;
     margin: 50px;
     padding: 0;
+}
+
+.home {
+    cursor: pointer;
 }
