@@ -7,7 +7,10 @@ const Nav = () => {
     return (
         <div className='navContainer'>
             <img className='ticket' alt='ticket icon'src={ticket} />
-            <h1>Rancid Tomatillos! <img className='tomatillo' alt='tomato' src={tomato}/> </h1>
+            <div className='headerContent'>
+                <h1>Rancid Tomatillos! Movie Reviews</h1>
+                <img className='tomatillo' alt='tomato' src={tomato} /> 
+            </div> 
             <img className='home'alt='home icon' src={home} />
         </div>
     )
