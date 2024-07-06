@@ -1,8 +1,22 @@
 .navContainer {
     display: flex;
+    height: 7em;
     justify-content: space-between;
     font-size: 50px;
     padding: .5%;
-    margin: .9%;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: cursive;
+    background-color: aqua;
+    align-items: center;
+}
+
+.tomatillo {
+   width: 15%;
+}
+
+.home,
+.ticket {
+    width: 4em;
+    height: 4em;
+    margin: 50px;
+    padding: 0;
 }

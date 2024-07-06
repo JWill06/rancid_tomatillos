@@ -1,25 +1,39 @@
 .cardContainer {
    display: flex;
    flex-direction: column;
-   max-width: 200px;
+   max-width: 150px;
    max-height: 500px;
    background-color: white;
    border-radius: 5rem;
-   margin: 15px;
+   margin: 45px;
    padding: 5%;
    justify-content: center;
    align-items: center;
+   background-color: aqua;
    img {
-    margin: 8px;
-    max-width: 350px;
-    max-height: 450px;
+    margin-top: 8px;
+    max-width: 390px;
+    max-height: 420px;
+    border-radius: 5rem;
     }
 }
 
 .posterContainer {
+    height: 260px;
+    width: 100%;
     font-size: 20px;
+    text-wrap: none;
 }
 
 .title {
     font-size: 35px;
+}
+
+.rating,
+.releaseDate {
+    font-size: 25px;
+}
+
+.releaseDate {
+    text-wrap: none;
 }
