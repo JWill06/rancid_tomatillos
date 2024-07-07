@@ -33,6 +33,16 @@ body {
     }
 }
 
+.read-more-link {
+    color: blue;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .read-more-link:hover {
+    text-decoration: underline;
+  }
+
 /* .posterContainer {
     display: flex;
     height: 10%;
