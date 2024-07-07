@@ -15,7 +15,7 @@ const Nav = ({onClick}) => {
             <img className='ticket' alt='ticket icon'src={ticket} />
             <div className='headerContent'>
             <img className='tomatillo' alt='tomato' src={tomato} /> 
-                <h1>Rancid Tomatillos </h1>
+                <h1>Rancid Tomatillos ~</h1>
                 <h2>Movie Reviews</h2>
                 <img className='tomatillo' alt='tomato' src={tomato} /> 
             </div> 
