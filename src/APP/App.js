@@ -1,9 +1,8 @@
-// import movieData from "../mockData";
 import './App.css';
 import Nav from '../Nav/Nav'
 import Card from '../Card/Card';
 import Footer from "../Footer/Footer";
-import { useState, UseEffect, useEffect } from "react"
+import { useState, useEffect } from "react"
 import Details from "../Details/Details";
 
 function App() {
@@ -15,20 +14,13 @@ const fetchAllMovies = () => {
   fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
   .then(response => response.json())
   .then(data => setMovie([...data.movies]))
+  .catch(error => console.error('Failed to fetch', error))
 }
-
-// const fetchedMovie = 1
-
-// const fetchSingleMovie = () => {
-//   fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies/:movie_id')
-//   .then(response => response.json())
-//   .then(data => setMovie([data.movie]))
-// }
 
 useEffect(() => {
   fetchAllMovies();
-  // fetchSingleMovie()
 }, [])
+
 
 const handleMovieClick = (movieId) => {
   setSelectedMovie(movieId)
@@ -46,7 +38,7 @@ const handleMainView = () => {
         <Nav onClick={handleMainView}/>
       <header className="App-header">
       {detailView ? (
-          <Details video={movie.find(m => m.id === selectedMovie)} />
+          <Details video={movie.find(m => m.id === selectedMovie)} id={selectedMovie} />
         ) : (
           movie.map((movie, index) => (
             <Card key={index} video={movie} onSelect={handleMovieClick} />

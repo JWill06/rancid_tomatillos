@@ -1,7 +1,6 @@
 import './Card.css'
 import moment from 'moment';
 import { useState } from 'react';
-// export let updatedRating;
 
 const Card = ({video, onSelect}) => {
     const monthAndYear = moment(video.release_date).format('MMM YYYY')
@@ -17,6 +16,7 @@ const Card = ({video, onSelect}) => {
                 <h1 className='title'>{video.title}</h1>
                 <p className='rating'> {video.average_rating}/10 ★'s</p>
                 <p className='releaseDate'>{monthAndYear}</p>
+                <p>...Details</p>
             </div>
         </div>
     )

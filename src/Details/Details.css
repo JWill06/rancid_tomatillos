@@ -18,6 +18,7 @@ body {
     position: relative;
     height: 100%;
     max-width: 75%;
+    border-radius: 5rem;
 }
 
 .backgroundContainer {
