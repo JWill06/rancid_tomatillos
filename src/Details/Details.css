@@ -43,10 +43,9 @@ body {
     text-decoration: underline;
   }
 
-/* .posterContainer {
-    display: flex;
-    height: 10%;
-    align-items: ;
-    justify-content: space-around;
-    margin: 15px;
-} */
+.textSection {
+    max-width: 50%;
+    max-height: 100%;
+    padding: .5em;
+    margin: .5em;
+}

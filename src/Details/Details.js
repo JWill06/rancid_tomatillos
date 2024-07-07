@@ -3,9 +3,10 @@ import moment from 'moment';
 import { useEffect, useState } from 'react';
 
 const Details = ({video, id}) => {
-    // const monthAndYear = moment(video.release_date).format('MMM YYYY');
-const [selectedMovie, setSelectedMovie] = useState(null)
-const [isReadMore, setIsReadMore] = useState(false);
+    const monthAndYear = moment(video.release_date).format('MMM D, YYYY');
+    const [selectedMovie, setSelectedMovie] = useState(null)
+    const [isReadMore, setIsReadMore] = useState(false);
+
     const fetchSingleMovie = (id) => {
         fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
         .then(response => response.json())
@@ -18,7 +19,6 @@ const [isReadMore, setIsReadMore] = useState(false);
       }, [])
 
     useEffect(()=>{
-        console.log('SELECTED',selectedMovie)
     }, [selectedMovie])
 
     const toggleReadMore = () => {
@@ -31,17 +31,17 @@ const [isReadMore, setIsReadMore] = useState(false);
         <img src={video.backdrop_path} className="backdrop-image"/>
         <div className='backgroundContainer'>
             <img src={video.poster_path} alt='Poster' />
-            <div>
+            <div className='textSection'>
                 <h1 className= 'title'>{selectedMovie.title}</h1>
-                {/* <p><strong> Release Date: </strong>{monthAndYear}</p> */}
+                <p><strong> Release Date: </strong>{monthAndYear}</p>
                 <p><strong> Average Rating: </strong>{selectedMovie.average_rating}/10 ★'s</p>
-                <p><strong>Overview:</strong> 
+                <p><strong>Overview: </strong> 
               {isReadMore ? selectedMovie.overview : `${selectedMovie.overview.substring(0, 100)}...`}
               <span className='read-more-link' onClick={toggleReadMore}>
                   {isReadMore ? ' Read Less' : ' Read More'}
                   </span>
                 </p>
-                <p><strong> Budget: </strong>${selectedMovie.budget.toLocaleString()}</p>
+                <p><strong> Budget: </strong> {selectedMovie.budget > 0 ? `$${selectedMovie.budget.toLocaleString()}` : 'Not available'}</p>
             </div>
         </div>
     </article>
