@@ -55,6 +55,7 @@ const Details = ({video, id}) => {
                 </div>
             </div>
             </div>
+
             </div>
     </article>
     : <p>....Loading</p>)
