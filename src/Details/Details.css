@@ -1,9 +1,5 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-}
-
 .detailsContainer {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     background: #4AC29A;  
@@ -18,18 +14,19 @@ body {
     position: relative;
     height: 100%;
     max-width: 75%;
-    border-radius: 5rem;
+    border-radius: 2.5rem;
 }
 
 .backgroundContainer {
     display: flex;
+    flex-wrap: wrap;
     height: 60%;
     align-items: center;
-    justify-content: space-around;
-    margin: 25px;
+    justify-content: space-evenly;
+    margin: 55px;
     img {
         width: 25%;
-        border-radius: 5rem;
+        border-radius: 2.5rem;
     }
 }
 
@@ -43,9 +40,32 @@ body {
     text-decoration: underline;
   }
 
-.textSection {
-    max-width: 50%;
-    max-height: 100%;
-    padding: .5em;
-    margin: .5em;
-}
+  .titleSection {
+    max-width: 60%;
+  }
+
+  .textSection {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    font-size: 35px;
+    max-width: 100;
+  }
+  
+  .movieTitle {
+    font-size: 50px; 
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .childrenRow {
+    display: flex;
+    justify-content: space-between; 
+    max-width: 50%; 
+  }
+  
+  .childrenText,
+  .additionalText {
+    flex: 1; 
+    padding: 0 5%; 
+  }
