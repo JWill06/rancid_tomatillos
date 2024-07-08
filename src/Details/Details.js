@@ -42,6 +42,11 @@ const Details = ({video, id}) => {
                   </span>
                 </p>
                 <p><strong> Budget: </strong> {selectedMovie.budget > 0 ? `$${selectedMovie.budget.toLocaleString()}` : 'Not available'}</p>
+                <p><strong> Revenue: </strong> {selectedMovie.revenue > 0 ? `$${selectedMovie.revenue.toLocaleString()}` : 'Not available'}</p>
+                <p><strong> Runtime: </strong> {selectedMovie.runtime} minutes</p>
+                <div className='genreSection'>
+                    <p><strong>Genres: </strong> {selectedMovie.genres.map(genre => genre.name).join(', ')}</p>
+                </div>
             </div>
         </div>
     </article>

@@ -49,3 +49,14 @@ body {
     padding: .5em;
     margin: .5em;
 }
+
+.genreSection {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+}
+
+.genreSection p {
+    font-size: 0.8em;
+    margin: 0;
+}
