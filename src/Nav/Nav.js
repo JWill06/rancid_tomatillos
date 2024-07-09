@@ -2,14 +2,11 @@ import './Nav.css'
 import home from '../images/icons8-home-150.png'
 import ticket from '../images/icons8-movie-ticket-100.png'
 import tomato from '../images/icons8-tomato-64.png'
+import { NavLink } from 'react-router-dom'
 
-const Nav = ({onClick}) => {
+const Nav = () => {
 
-    const handleChange = (e) => {
-        e.preventDefault();
-
-        onClick()
-    }
+    
     return (
         <div className='navContainer'>
             <img className='ticket' alt='ticket icon'src={ticket} />
@@ -19,7 +16,9 @@ const Nav = ({onClick}) => {
                 <h2>Movie Reviews</h2>
                 <img className='tomatillo' alt='tomato' src={tomato} /> 
             </div> 
-            <img className='home'alt='home icon' src={home} onClick={handleChange}/>
+            <NavLink to="/">
+                <img className='home'alt='home icon' src={home}/>
+            </NavLink>
         </div>
     )
 }

@@ -1,12 +1,15 @@
+.navLink {
+    text-decoration: none;
+}
+
 .cardContainer {
    display: flex;
    flex-direction: column;
-   max-width: 200px;
-   max-height: 540px;
+   max-width: 280px;
+   max-height: 610px;
    border-radius: 2.5rem;
-   margin: 40px;
-   padding: 2.5%;
-   justify-content: space-evenly;
+   margin: 45px;
+   padding: 7%;
    align-items: center;
    background-color: transparent;
    cursor: pointer;
@@ -22,7 +25,6 @@
     height: 100%;
     width: 350px;
     font-size: 20px;
-    text-wrap: none;
     color: black;
 }
 

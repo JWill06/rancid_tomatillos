@@ -4,16 +4,15 @@ import Card from '../Card/Card';
 import Footer from "../Footer/Footer";
 import { useState, useEffect } from "react"
 import Details from "../Details/Details";
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
-const [movie, setMovie] = useState([])
-const [selectedMovie, setSelectedMovie] = useState(null)
-const [detailView, setDetailView] = useState(false)
+const [movies, setMovies] = useState([])
 
 const fetchAllMovies = () => {
   fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
   .then(response => response.json())
-  .then(data => setMovie([...data.movies]))
+  .then(data => setMovies([...data.movies]))
   .catch(error => console.error('Failed to fetch', error))
 }
 
@@ -21,29 +20,17 @@ useEffect(() => {
   fetchAllMovies();
 }, [])
 
-
-const handleMovieClick = (movieId) => {
-  setSelectedMovie(movieId)
-  setDetailView(true)
-}
-
-const handleMainView = () => {
-  setMovie(movie)
-  setSelectedMovie(null)
-  setDetailView(false)
-}
-
   return (
     <div className="App">
-        <Nav onClick={handleMainView}/>
+        <Nav />
       <header className="App-header">
-      {detailView ? (
-          <Details video={movie.find(m => m.id === selectedMovie)} id={selectedMovie} />
-        ) : (
-          movie.map((movie, index) => (
-            <Card key={index} video={movie} onSelect={handleMovieClick} />
-          ))
-        )}
+        <Routes>
+        <Route path="/" element={
+              movies.map((movie) => (
+                <Card key={movie.id} movie={movie} />
+              ))}/>
+          <Route path='/movies/:id' element={<Details  />}/>
+        </Routes>
         </header>
       <Footer />
     </div>
