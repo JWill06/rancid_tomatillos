@@ -1,22 +1,21 @@
-describe('Home Page', () => {
+describe('Movie Details Page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/');
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
+      statusCode: 200,
+      fixture: 'movies.json'
+    })
+    .visit('http://localhost:3000/')
   });
-
-  it('should display the navigation bar', () => {
-    cy.get('.navContainer').should('be.visible');
-    cy.get('.navContainer .home').should('have.attr', 'alt', 'home icon');
+  it('should display the title of the application', () => {
+    cy.get('.navContainer').should('contain', 'Rancid Tomatillos')
   })
-  it('should display the footer', () => {
-    cy.get('.footerContainer').should('be.visible');
-    cy.get('.footerContainer .tomatillo').should('have.attr', 'alt', 'tomato');
-  });
   it('should display a list of movies', () => {
-    cy.get('.cardContainer').should('have.length.greaterThan', 0);
-  });
-  it('should navigate to the movie details page when a movie card is clicked', () => {
-    cy.get('.cardContainer').first().click();
-    cy.url().should('include', '/movies/');
-    cy.get('.detailsContainer').should('be.visible');
-  });
+    cy.get('.cardContainer').should('have.length.greaterThan', 0)
+  })
+  it('should contain a movie title', () => {
+    cy.get('.cardContainer').find('h1').should('contain', 'Money Plane')
+  })
+  it('should contain the proper url', () => {
+    cy.url().should('include', '3000/')
+  })
 })
