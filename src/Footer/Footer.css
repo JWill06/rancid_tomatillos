@@ -10,5 +10,19 @@
 
 .tomatillo {
     width: 5%;
-    height: auto;
+    height: 40%;
+}
+
+@media (max-width: 393px){
+    .tomatillo{
+        width: 15%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 1559px){
+    .tomatillo{
+        width: 15%;
+        height: 45%;
+    }
 }

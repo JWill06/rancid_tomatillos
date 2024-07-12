@@ -30,6 +30,7 @@ useEffect(() => {
                 <Card key={movie.id} movie={movie} />
               ))}/>
           <Route path='/movies/:id' element={<Details  />}/>
+          <Route path='*' element='Does not exist' />
         </Routes>
         </header>
       <Footer />

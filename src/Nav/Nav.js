@@ -12,8 +12,9 @@ const Nav = () => {
             <img className='ticket' alt='ticket icon'src={ticket} />
             <div className='headerContent'>
             <img className='tomatillo' alt='tomato' src={tomato} /> 
-                <h1>Rancid Tomatillos ~</h1>
-                <h2>Movie Reviews</h2>
+                <h1>Rancid Tomatillos </h1>
+                <h1 className='slash'>🍿</h1>
+                <h1>Movie Reviews</h1>
                 <img className='tomatillo' alt='tomato' src={tomato} /> 
             </div> 
             <NavLink to="/">
