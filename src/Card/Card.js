@@ -9,6 +9,7 @@ const Card = ({movie}) => {
 
     return (
         <NavLink to={`/movies/${id}`} className='navLink'>
+            
             <div className="cardContainer">
                     <img alt='movie poster'src={movie.poster_path}/>
                 <div className='posterContainer' >

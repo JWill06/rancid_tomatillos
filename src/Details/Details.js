@@ -42,7 +42,7 @@ const Details = () => {
         };
         fetchVideos()
     }, [id])
-    const trailerVideoId = trailer.length > 0 ? trailer[0].key : '';
+    const trailerVideoId = trailer.length > 0 ? trailer[15]?.key : null;
 
     if (isLoading) {
         return <p>Loading...</p>;
@@ -54,20 +54,22 @@ const Details = () => {
 
     const monthAndYear = movie.release_date ? moment(movie.release_date).format('MMM D, YYYY') : '';
     const formattedOverview = movie.overview ? (isReadMore ? movie.overview : `${movie.overview.substring(0, 100)}...`) : '';
-
     return (
         <article className='detailsContainer'>
-            {trailerVideoId && (
-                <iframe
-                    width="1400"
-                    height="1000"
-                    src={`https://www.youtube.com/embed/${trailerVideoId}`}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                ></iframe>
+             {trailerVideoId ? (
+                <iframe className='movie-trailer' 
+                        src={`https://www.youtube.com/embed/${trailerVideoId}`} 
+                        title="YouTube video player" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowFullScreen
+                />
+            ) : (
+                <img className='backdrop' src={movie.backdrop_path} alt="Movie backdrop" />
             )}
+            <div className='genreSection'>
+                <h2><strong>Genres:</strong> {movie.genres  ? movie.genres.map(genre => <p>{genre}</p>) : 'Not Available'}</h2>
+            </div>
             <div className='backgroundContainer'>
                 <img src={movie.poster_path} alt='Poster' />
                 <div className='titleSection'>
@@ -76,7 +78,7 @@ const Details = () => {
                         <div className='childrenText'>
                             <p><strong>Release Date:</strong> {monthAndYear}</p>
                             <p><strong>Average Rating:</strong> {movie.average_rating}/10 ★'s</p>
-                            <p><strong>Overview:</strong>
+                            <p className= 'overview'><strong>Overview: </strong>
                                 {formattedOverview}
                                 <span className='read-more-link' onClick={() => setIsReadMore(!isReadMore)}>
                                     {isReadMore ? 'Read Less' : 'Read More'}
@@ -87,9 +89,9 @@ const Details = () => {
                             <p><strong>Budget:</strong> {movie.budget > 0 ? `$${movie.budget.toLocaleString()}` : 'Not available'}</p>
                             <p><strong>Revenue:</strong> {movie.revenue > 0 ? `$${movie.revenue.toLocaleString()}` : 'Not available'}</p>
                             <p><strong>Runtime:</strong> {movie.runtime}min</p>
-                            <div className='genreSection'>
-                                <p><strong>Genres:</strong> {movie.genres && Array.isArray(movie.gneres) ? movie.genres.map(genre => genre).join(', ') : 'Not Available'}</p>
-                            </div>
+                            {/* <div className='genreSection'>
+                                <p><strong>Genres:</strong> {movie.genres  ? movie.genres.map(genre => genre).join(', ') : 'Not Available'}</p>
+                            </div> */}
                         </div>
                     </div>
                 </div>
