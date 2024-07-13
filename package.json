@@ -12,14 +12,20 @@
     "react-router-dom": "^6.24.1",
     "react-scripts": "5.0.1",
     "router": "^1.3.8",
-    "web-vitals": "^2.1.4"
-  },
+    "web-vitals": "^2.1.4",
+    "homepage": "http://baileyjarvis2814.github.io/rancid_tomatillos" },
+    "repository": {
+       "type": "git",
+       "url": "git+https://github.com/baileyjarvis2814/rancid_tomatillos"
+    },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
