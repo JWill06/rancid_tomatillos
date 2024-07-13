@@ -38,41 +38,7 @@
     font-size: 100px;
 }
 
-@media (max-width: 393px){
-    .navContainer {
-        display: flex;
-        flex-direction: row;
-        height: 4rem;
-    }
-    .headerContent {
-        height: 10em;
-        font-size: 8px;
-        .tomatillo {
-            width: 8%;
-            height: 30%;
-            margin-top: 10px;
-            padding: 15px;
-        }
-        h2 {
-            margin: 15px 0 0 25px;
-            font-size: 8px;
-        }
-    }
-
-    .ticket,
-    .home {
-        width: 1em;
-        height: 1em;
-        padding: 0;
-        margin: 5px;
-    }
-    .slash {
-        margin-top: 5px;
-        font-size: 40px;
-      }
-}
-
-@media (min-width: 394px) and (max-width: 435px){
+@media (min-width: 393px) and (max-width: 435px){
     .navContainer {
         display: flex;
         flex-direction: row;
