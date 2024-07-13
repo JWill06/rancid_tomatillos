@@ -89,9 +89,6 @@ const Details = () => {
                             <p><strong>Budget:</strong> {movie.budget > 0 ? `$${movie.budget.toLocaleString()}` : 'Not available'}</p>
                             <p><strong>Revenue:</strong> {movie.revenue > 0 ? `$${movie.revenue.toLocaleString()}` : 'Not available'}</p>
                             <p><strong>Runtime:</strong> {movie.runtime}min</p>
-                            {/* <div className='genreSection'>
-                                <p><strong>Genres:</strong> {movie.genres  ? movie.genres.map(genre => genre).join(', ') : 'Not Available'}</p>
-                            </div> */}
                         </div>
                     </div>
                 </div>
