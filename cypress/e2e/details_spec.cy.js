@@ -35,22 +35,3 @@ describe('Movie Details Page' , () => {
  })
 })
 
-
-// describe('Movie Detail Failed Page' , () => {
-//   beforeEach(() => { 
-//     cy.intercept( 'GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/436270', {
-//       statusCode: 500,
-//       fixture: 'movie_details'
-//     })
-//     .visit("http://localhost:3000/movies/999999")
-//   });
-//   it('should show a loading message', () => {
-//     cy.get('p').should('contain', 'Loading...')
-//   })
-  // it('should display an error message if a bad fetch is thrown', () => {
-  //   cy.get('p').should('contain', 'Error: Failed to fetch movie trailer.')
-  // })
-// })
-
-//  it('should handle a bad network request gracefully')
-// })
