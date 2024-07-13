@@ -15,8 +15,10 @@ describe('Movie Details Page' , () => {
     cy.get('.additionalText').should('contain', 'Budget:')
       .and('contain', 'Revenue:')
       .and('contain', 'Runtime:')
-      .and('contain', 'Genres:');
   });
+  it('should display a genre details', () => {
+    cy.get('.genreSection').should('contain', 'Genres:')
+  })
 
   it('should display the movie trailer', () => {
     cy.get('iframe').should('exist').and('have.attr', 'src').and('include', 'youtube.com/embed/');
