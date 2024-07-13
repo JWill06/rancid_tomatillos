@@ -8,6 +8,7 @@ This application is a movie review webpage that shows rated movies. As a user yo
 - Jarvis Bailey, https://github.com/baileyjarvis2814
 
 ## Preview of application 
+![rancid-tomatillos2](https://github.com/user-attachments/assets/b5b11203-d2c2-4dc4-95e4-2fac0c0c9857)
 
 
 ## Context 
