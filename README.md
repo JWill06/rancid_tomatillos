@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Rancid Tomatillos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract
+This application is a movie review webpage that shows rated movies. As a user you can click on any individual movie and see either a movie poster or movie trailer. There is also more information to see such as budgets, revenue made, an overview of the movie, genres, and the overall rating given to the movie.
 
-## Available Scripts
+## Contributors
+- Jordan Williamson, https://github.com/JWill06
+- Jarvis Bailey, https://github.com/baileyjarvis2814
 
-In the project directory, you can run:
+## Preview of application 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Context 
+This project was a paired project and took us roughly 40 hours to complete from the design/markup and brainstorming solutions/issues. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Cloning the repo or seeing the deployed application
+### Option 1 You can clone down the repo by following these steps:
+1. go to the following link `git@github.com:baileyjarvis2814/rancid_tomatillos.git`.
+2. Once you're there hit `Fork` on the top right.
+3. Once you fork it click on `code`.
+4. From there either hit the SSH or HTTPS and copy the code to your clipboard.
+5. In your local machine type `git clone (link here)`.
+6. Once you clone the repo cd into the repository and then type `npm i`.
+7. once that's completed type `npm start` and the page will open up on your default browser.
 
-### `npm test`
+### Option 2 using the deployed link
+1. Follow this link and you will be taken to the deployed application. (it is responsive and should work on multiple screen sizes)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Wins 
+1. Completing the intial iterations for the project within the first couple of days.
+2. Converting a single page application into a multiple page application using React-router.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Challenges 
+1. Responsive layout and figuring out that our changes were only good for the time being and that we had repetitave selectors that caused the issue.
+2. Trying to fetch single movie data where we were fetching all the movie data and then trying to pass it along. We ended up fetching the data inside the appropriate file that we needed it in. 
+3. Cypress testing is a bit difficult at first but then we got the hang of it. 
